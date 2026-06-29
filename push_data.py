@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MONGO_DB_URL=os.getenv("MONGO_DB_URL")
-print(MONGO_DB_URL)
+#print(MONGO_DB_URL)
 
 import certifi
 ca=certifi.where()
@@ -54,7 +54,7 @@ if __name__=='__main__':
     Collection="NetworkData"
     networkobj=NetworkDataExtract()
     records=networkobj.csv_to_json_convertor(file_path=FILE_PATH)
-    print(records)
+    print(f"Total Records: {len(records)}")
     no_of_records=networkobj.insert_data_mongodb(records,DATABASE,Collection)
     print(no_of_records)
 
