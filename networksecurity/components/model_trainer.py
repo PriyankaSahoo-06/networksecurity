@@ -152,13 +152,6 @@ class ModelTrainer:
         return model_trainer_artifact
 
 
-        
-
-
-       
-    
-    
-        
     def initiate_model_trainer(self)->ModelTrainerArtifact:
         try:
             train_file_path = self.data_transformation_artifact.transformed_train_file_path
